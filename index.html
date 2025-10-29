@@ -5,152 +5,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سياسة الخصوصية - ghawy غاوي</title>
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts (Inter) - Bootstrap 5 recommends sans-serif -->
+    <!-- Google Fonts (Tajawal) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set 'Tajawal' as the default sans-serif font
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
     
     <style>
-        /* Using Tajawal for Arabic content */
+        /* Optional: Improve anti-aliasing */
         body {
-            font-family: 'Tajawal', 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Light gray background */
-        }
-        .privacy-container {
-            max-width: 900px;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            padding: 40px;
-        }
-        h1 {
-            color: #212529;
-            border-bottom: 2px solid #0d6efd; /* Bootstrap primary color */
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-        }
-        h3 {
-            color: #0d6efd; /* Bootstrap primary color */
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        p, li {
-            line-height: 1.7;
-            color: #495057; /* Darker gray for text */
-        }
-        .lead {
-            font-size: 1.15rem;
-            font-weight: 400;
-        }
-        .contact-email {
-            font-weight: 700;
-            color: #0d6efd;
-            text-decoration: none;
-        }
-        .contact-email:hover {
-            text-decoration: underline;
-        }
-        .last-updated {
-            display: block;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-            color: #6c757d; /* Muted text */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
     </style>
 </head>
-<body>
+<body class="font-sans bg-gray-50 text-gray-800">
 
-    <div class="container privacy-container">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto max-w-6xl p-4 flex justify-between items-center">
+            <!-- Logo & App Name -->
+            <div class="flex items-center gap-3">
+                <img src="https://play-lh.googleusercontent.com/1psJ4Sf9tOnTnwilk_rBi-Q9wmUBI0mu-AUAtaQ4VixxI1Tk6fJM-dba1pxIOn8hZkU=w240-h480-rw" 
+                     alt="شعار تطبيق ghawy غاوي" 
+                     class="h-10 w-10 rounded-lg object-cover shadow-sm">
+                <span class="text-xl font-bold text-gray-800">ghawy غاوي</span>
+            </div>
+     
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container max-w-5xl mx-auto my-12 p-6 md:p-12 bg-white rounded-2xl shadow-xl">
         
-        <header class="text-center">
-            <h1 class="display-5 fw-bold">سياسة الخصوصية لتطبيق "ghawy غاوي"</h1>
-            <span class="last-updated"><strong>تاريخ آخر تحديث:</strong> 29 أكتوبر 2025</span>
-        </header>
+        <!-- Page Title Header -->
+        <div class="text-center border-b border-gray-200 pb-8 mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-4">سياسة الخصوصية</h1>
+            <p class="text-lg text-gray-500">نحن نأخذ خصوصيتك على محمل الجد</p>
+            <span class="text-sm text-gray-400 mt-4 block">آخر تحديث: 29 أكتوبر 2025</span>
+        </div>
 
-        <p class="lead text-center mb-4">
-            نحن في تطبيق "ghawy غاوي" (المشار إليه فيما بعد بـ "التطبيق") نحترم خصوصيتك ونلتزم بحمايتها. توضح سياسة الخصوصية هذه كيف نتعامل مع معلوماتك.
+        <!-- Intro Paragraphs -->
+        <p class="text-xl font-medium text-gray-700 text-center mb-6">
+            نحن في تطبيق "ghawy غاوي" نحترم خصوصيتك ونتفهم أهميتها. توضح سياسة الخصوصية هذه كيفية تعاملنا مع معلوماتك لضمان أعلى مستويات الأمان والشفافية.
         </p>
-        <p class="text-center">
+        <p class="text-center mb-10 text-gray-600">
             باستخدامك للتطبيق، فإنك توافق على الممارسات الموضحة في هذه السياسة.
         </p>
 
-        <hr class="my-4">
+        <!-- Policy Sections -->
+        <div class="space-y-12">
 
-        <section id="info-collection">
-            <h3>1. المعلومات التي نجمعها</h3>
-            <p>
-                نحن <strong>لا نجمع أي معلومات شخصية</strong> أو بيانات يمكن التعرف عليها منك. التطبيق مصمم للعمل دون الحاجة إلى أي معلومات منك.
-            </p>
+            <!-- Section: Info Collection -->
+            <section id="info-collection">
+                <h3 class_="text-2xl md:text-3xl font-bold text-gray-900 mb-5 flex items-center gap-3">
+                    <svg class="w-7 h-7 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 21m-9-9A9 9 0 1 1 21 12a9 9 0 0 1-9 9Z" /></svg>
+                    <span>1. المعلومات التي نجمعها</span>
+                </h3>
+                <p class="text-lg leading-relaxed text-gray-700 border-r-4 border-blue-100 pr-4">
+                    نحن <strong class="font-bold text-gray-900">لا نجمع أي معلومات شخصية</strong> أو بيانات يمكن التعرف عليها منك. التطبيق مصمم للعمل دون الحاجة إلى أي معلومات شخصية من المستخدمين. لا نقوم بجمع اسمك، بريدك الإلكتروني، موقعك، صورك، أو أي بيانات حساسة أخرى.
+                </p>
+            </section>
+
+            <!-- Section: Internet Usage -->
+            <section id="internet-usage">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 flex items-center gap-3">
+                    <svg class="w-7 h-7 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+                    <span>2. استخدام الإنترنت</span>
+                </h3>
+                <p class="text-lg leading-relaxed text-gray-700 border-r-4 border-blue-100 pr-4">
+                    تطبيق "ghawy غاوي" <strong class="font-bold text-gray-900">لا يتطلب اتصالاً بالإنترنت</strong> لأداء وظائفه الأساسية. جميع محتويات ووظائف التطبيق تعمل بشكل كامل دون الحاجة إلى الاتصال بأي خوادم خارجية أو استخدام بيانات الإنترنت الخاصة بك. لا نقوم بإرسال أو استقبال أي بيانات من جهازك عبر الإنترنت.
+                </p>
+            </section>
+
+            <!-- Section: Permissions -->
+            <section id="permissions">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 flex items-center gap-3">
+                    <svg class="w-7 h-7 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.017 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" /></svg>
+                    <span>3. الأذونات (الصلاحيات)</span>
+                </h3>
+                <p class="text-lg leading-relaxed text-gray-700 mb-4 border-r-4 border-blue-100 pr-4">
+                    التطبيق يطلب صلاحية واحدة فقط للعمل بفعالية:
+                </p>
+                <ul class="list-disc list-outside mr-10 space-y-2">
+                    <li class="text-lg leading-relaxed text-gray-700">
+                        <strong>الإشعارات (Notifications):</strong> هذه الصلاحية ضرورية لكي يتمكن التطبيق من إرسال إشعارات إليك كجزء من تجربة المستخدم. هذه الإشعارات تتم معالجتها محلياً على جهازك ولا تتضمن نقل أي بيانات شخصية إلينا أو لأي طرف ثالث.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Section: Info Sharing -->
+            <section id="info-sharing">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 flex items-center gap-3">
+                    <svg class="w-7 h-7 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.6-9.75a14.94 14.94 0 0 0-3.6 9.75m-9.3-9.75c0 2.568 1.113 4.97 2.947 6.693m11.51-6.693c0 2.568-1.113 4.97-2.947 6.693-1.834 1.723-4.237 2.947-6.82 2.947-2.583 0-4.986-1.224-6.82-2.947-1.834-1.723-2.947-4.125-2.947-6.693s1.113-4.97 2.947-6.693c1.834-1.723 4.237-2.947 6.82-2.947 2.583 0 4.986 1.224 6.82 2.947 1.834 1.723 2.947 4.125 2.947 6.693Z" /></svg>
+                    <span>4. مشاركة المعلومات</span>
+                </h3>
+                <p class="text-lg leading-relaxed text-gray-700 border-r-4 border-blue-100 pr-4">
+                    بما أننا لا نجمع أي معلومات شخصية من المستخدمين، فإننا <strong class="font-bold text-gray-900">لا نشارك، أو نبيع، أو نؤجر، أو ننقل</strong> أي معلومات عنك إلى أي أطراف ثالثة تحت أي ظرف من الظروف. خصوصيتك هي أولويتنا القصوى.
+                </p>
+            </section>
+
+            <!-- Section: Data Security -->
+            <section id="data-security">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 flex items-center gap-3">
+                    <svg class="w-7 h-7 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.4-1.683 3.038M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.7 3.7m-3.7-3.7L16.5 6.5m0 0a8.25 8.25 0 0 0-13.803 3.7m13.803-3.7c1.03.633 1.953 1.518 2.57 2.57m-2.57-2.57C16.5 6.5 16.5 6.5 16.5 6.5Z" /></svg>
+                    <span>5. أمن البيانات</span>
+                </h3>
+                <p class="text-lg leading-relaxed text-gray-700 border-r-4 border-blue-100 pr-4">
+                    نظراً لأننا لا نقوم بجمع أو تخزين أي بيانات شخصية للمستخدمين، فلا يوجد خطر متعلق بتسريب أو اختراق بياناتك من خوادمنا، ببساطة لأننا لا نمتلك خوادم لبيانات المستخدمين. جميع عمليات التطبيق تتم على جهازك محلياً.
+                </p>
+            </section>
+
+            <!-- Section: Children's Privacy -->
+            <section id="children-privacy">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 flex items-center gap-3">
+                    <svg class="w-7 h-7 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.998-2.582 9.095 9.095 0 0 0-3.741.479m0 0c-.867.365-1.79.622-2.75.787a9.09 9.09 0 0 0-3.741-.479 3 3 0 0 0-4.998 2.582A9.09 9.09 0 0 0 6 18.72m0 0c.867.365 1.79.622 2.75.787a9.09 9.09 0 0 1-3.741-.479 3 3 0 0 1-4.998 2.582A9.09 9.09 0 0 1 6 18.72Z" /></svg>
+                    <span>6. خصوصية الأطفال</span>
+                </h3>
+                <p class="text-lg leading-relaxed text-gray-700 border-r-4 border-blue-100 pr-4">
+                    تطبيق "ghawy غاوي" لا يستهدف الأطفال بشكل خاص ولا يجمع أي معلومات شخصية عن عمد من أي شخص، بما في ذلك الأطفال دون سن 13 عاماً. إذا علمت أن طفلك قد زودنا بمعلومات شخصية، يرجى الاتصال بنا.
+                </p>
+            </section>
+
+            <!-- Section: Policy Changes -->
+            <section id="policy-changes">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 flex items-center gap-3">
+                    <svg class="w-7 h-7 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.181m0-3.181-3.181-3.181m0 3.181H9M2.985 19.644l3.181-3.181M5.135 5.135A7.5 7.5 0 0 1 12 3v2.66m1.135 11.23A7.5 7.5 0 0 1 12 21v-2.66m0 0V9m0 5.34a7.5 7.5 0 0 1 0-5.34M12 9v2.66M18.865 5.135A7.5 7.5 0 0 0 12 3v2.66M12 21v-2.66M12 9v2.66m0 0a7.5 7.5 0 0 1 5.34 5.34M12 3a7.5 7.5 0 0 0-5.34 5.34" /></svg>
+                    <span>7. التغييرات على سياسة الخصوصية</span>
+                </h3>
+                <p class="text-lg leading-relaxed text-gray-700 border-r-4 border-blue-100 pr-4">
+                    قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر لتعكس أي تغييرات في ممارساتنا أو لأسباب تشغيلية أو قانونية أو تنظيمية. سنقوم بإعلامك بأي تغييرات عن طريق نشر سياسة الخصوصية الجديدة داخل التطبيق أو على صفحته في متجر التطبيقات. يُنصح بمراجعة هذه السياسة بشكل دوري لأي تحديثات.
+                </p>
+            </section>
+        </div>
+
+        <!-- Section: Contact Us & Download (CTA) -->
+        <section id="contact-us" class="mt-16 pt-12 border-t border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-50 p-8 md:p-12 rounded-2xl shadow-inner">
+                
+                <!-- Contact Info -->
+                <div class="text-center md:text-right">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-3">هل لديك أسئلة؟</h4>
+                    <p class="text-lg text-gray-600 mb-4">
+                        إذا كان لديك أي استفسارات، تواصل معنا عبر البريد الإلكتروني.
+                    </p>
+                    <a href="mailto:karam.araby@gmail.com" class="text-lg font-bold text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200">
+                        karam.araby@gmail.com
+                    </a>
+                </div>
+                
+                <!-- Download App -->
+                <div class="text-center md:text-right">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-3">حمّل التطبيق الآن</h4>
+                    <p class="text-lg text-gray-600 mb-5">
+                        احصل على تطبيق "ghawy غاوي" من متجر جوجل بلاي.
+                    </p>
+                    <a href="https://play.google.com/store/apps/details?id=com.moqla.theLoft&hl=ar" target="_blank" class="inline-block px-8 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-200 transform hover:scale-105">
+                        تحميل من Google Play
+                    </a>
+                </div>
+
+            </div>
         </section>
 
-        <section id="internet-usage">
-            <h3>2. استخدام الإنترنت</h3>
-            <p>
-                تطبيق "ghawy غاوي" <strong>لا يتطلب اتصالاً بالإنترنت</strong> لأداء وظائفه الأساسية. لا نقوم بإرسال أو استقبال أي بيانات من جهازك عبر الإنترنت.
-            </p>
-        </section>
+    </main>
 
-        <section id="permissions">
-            <h3>3. الأذونات (الصلاحيات)</h3>
-            <p>
-                التطبيق يطلب صلاحية واحدة فقط:
-            </p>
-            <ul>
-                <li>
-                    <strong>الإشعارات (Notifications):</strong> نحتاج هذه الصلاحية لإرسال إشعارات إليك كجزء من وظائف التطبيق. هذه الإشعارات تتم معالجتها محلياً على جهازك ولا تتضمن نقل أي بيانات شخصية إلينا.
-                </li>
-            </ul>
-            <p class="mt-3">
-                نحن لا نطلب أي صلاحيات أخرى (مثل الكاميرا، الموقع، جهات الاتصال، أو التخزين) لأننا لا نحتاجها.
-            </p>
-        </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 text-center text-sm mt-auto">
+        <div class="container mx-auto max-w-6xl">
+            <p class="mb-2 opacity-80">&copy; 2025 ghawy غاوي. جميع الحقوق محفوظة.</p>
+            <div class="space-x-6 opacity-60">
+                <a href="mailto:karam.araby@gmail.com" class="hover:text-blue-300 hover:underline">اتصل بنا</a>
+                <span>|</span>
+                <a href="https://play.google.com/store/apps/details?id=com.moqla.theLoft&hl=ar" target="_blank" class="hover:text-blue-300 hover:underline">تحميل التطبيق</a>
+            </div>
+        </div>
+    </footer>
 
-        <section id="info-sharing">
-            <h3>4. مشاركة المعلومات</h3>
-            <p>
-                بما أننا لا نجمع أي معلومات شخصية، فإننا <strong>لا نشارك، أو نبيع، أو نؤجر، أو ننقل</strong> أي معلومات عنك إلى أي أطراف ثالثة.
-            </p>
-        </section>
-
-        <section id="data-security">
-            <h3>5. أمن البيانات</h3>
-            <p>
-                نحن لا نقوم بتخزين أي بيانات شخصية، وبالتالي لا يوجد خطر متعلق بتسريب بياناتك من خوادمنا، لأننا لا نمتلك خوادم لبيانات المستخدمين.
-            </p>
-        </section>
-
-        <section id="children-privacy">
-            <h3>6. خصوصية الأطفال</h3>
-            <p>
-                التطبيق لا يجمع أي معلومات شخصية عن عمد من أي شخص، بما في ذلك الأطفال.
-            </p>
-        </section>
-
-        <section id="policy-changes">
-            <h3>7. التغييرات على سياسة الخصوصية</h3>
-            <p>
-                قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإعلامك بأي تغييرات عن طريق نشر سياسة الخصوصية الجديدة داخل التطبيق أو صفحته. يُنصح بمراجعة هذه السياسة بشكل دوري.
-            </p>
-        </section>
-
-        <section id="contact-us" class="mt-5 text-center p-4 bg-light rounded-3">
-            <h3>8. اتصل بنا</h3>
-            <p>
-                إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يمكنك التواصل معنا عبر البريد الإلكتروني:
-            </p>
-            <a href="mailto:karam.araby@gmail.com" class="contact-email fs-5">
-                karam.araby@gmail.com
-            </a>
-        </section>
-
-    </div>
-
-    <!-- Bootstrap JS Bundle (Popper included) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
